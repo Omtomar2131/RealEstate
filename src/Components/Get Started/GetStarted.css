@@ -1,0 +1,78 @@
+/* Wrapper section */
+.get-started-wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #3f57dd; /* Matching blue from the screenshot */
+    padding: 20px; /* Padding for spacing */
+    text-align: center; /* Center all text */
+    border-radius: 10px; /* Slightly rounded corners */
+    margin-top: 50px;
+    border: 8px solid rgba(255, 255, 255, 0.12);
+  }
+  
+  /* Container */
+  .get-started-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Align content vertically */
+    max-width: 1200px;
+    margin: 0 auto; /* Center content */
+  }
+  
+  /* Heading styling */
+  .get-started-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: white; /* White text */
+    margin-bottom: 20px;
+  }
+  
+  /* Text styling */
+  .get-started-text {
+    font-size: 18px;
+    color: #d8e3f7; /* Light white/blue text */
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.5;
+  }
+  
+  /* Button styling */
+  .get-started-btn {
+    padding: 15px 40px;
+    background-color: white; /* White button */
+    color: #3f57dd; /* Same blue as background */
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #e5edfb; /* Slightly lighter hover effect */
+    transform: scale(1.05); /* Small scale effect on hover */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .get-started-wrapper{
+        margin: 0%;
+        border-radius: 0%;
+    }
+    .get-started-heading {
+      font-size: 28px;
+    }
+  
+    .get-started-text {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  
+    .get-started-btn {
+      padding: 12px 35px;
+      font-size: 15px;
+    }
+  }
+  

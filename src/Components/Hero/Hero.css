@@ -1,0 +1,184 @@
+.hero-wrapper {
+    padding-top: 40px;
+    color: white;
+    position: relative;
+    padding-bottom: 2rem;
+    min-height: 100vh; /* Ensures full viewport height */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1; /* Can be adjusted or replaced with a fixed value if necessary */
+}
+
+.hero-container {
+    padding: 1.5rem;
+    display: flex;
+    row-gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items on small screens */
+    width: 100%;
+    gap: 2rem; /* Added gap between left and right containers */
+}
+
+.image-container {
+    width: 30rem;
+    height: 35rem;
+    overflow: hidden;
+    border-radius: 15rem 15rem 0 0; /* Rounded top corners */
+    border: 8px solid rgba(255, 255, 255, 0.12);
+}
+
+.image-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the container */
+}
+
+.hero-right {
+    margin-right: 30px;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 50px;
+    gap: 2rem; 
+}
+
+.hero-title {
+    position: relative;
+    z-index: 1;
+    font-size: 2.5rem; /* Large title size */
+    color: rgba(252, 251, 251, 0.9);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.hero-desc {
+    color: rgba(177, 174, 174, 0.9);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-bar {
+    background-color: white;
+    border-radius: 5px;
+    border: 3px solid rgba(120, 120, 120, 0.374);
+    display: flex;
+    align-items: center;
+    padding: 0.3rem;
+    position: relative;
+    width: 100%; /* Full width for better responsiveness */
+}
+
+.location-icon {
+    position: absolute;
+    left: 10px;
+    color: var(--blue);
+    font-size: 1.5rem;
+}
+
+.search-bar > input {
+    border: none;
+    outline: none;
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    flex: 1; /* Allow input to take available space */
+}
+
+.search-bar > button {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.orange-circle {
+    position: absolute;
+    top: -40px;
+    left: 260px; /* Can be adjusted based on design */
+    width: 7rem;
+    height: 7rem;
+    background: linear-gradient(270deg, #ffb978 0%, #ff922d 100%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.stat .count {
+    font-size: 2rem; /* Large count for visibility */
+    font-weight: 200;
+    color: orange; /* Highlighted count color */
+}
+
+.stat .text {
+    font-size: 1rem;
+    color: rgba(177, 174, 174, 0.9);
+    margin-top: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-wrapper {
+        padding-top: 50px; /* Adjusted for smaller screens */
+        padding-bottom: 1rem; /* Adjusted for smaller screens */
+    }
+
+    .hero-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center align items */
+    }
+
+    .image-container {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .hero-right {
+        margin-right: 0; /* Remove margin on smaller screens */
+    }
+
+    .hero-left {
+        padding-left: 0; /* Remove left padding on smaller screens */
+        align-items: center; /* Center align items */
+    }
+
+    .hero-title {
+        font-size: 2rem; /* Reduce title font size on mobile */
+    }
+
+    .hero-desc {
+        font-size: 0.9rem; /* Reduce description font size on mobile */
+    }
+
+    .search-bar > input {
+        padding: 0.5rem 0.5rem 0.5rem 2rem; /* Adjust padding for input */
+    }
+
+    .orange-circle {
+        left: 50%; /* Center the orange circle */
+        transform: translateX(-50%); /* Center alignment */
+    }
+
+    .stats {
+        align-items: center; /* Center align stats */
+        gap: 1rem; /* Adjust gap for smaller screens */
+    }
+}

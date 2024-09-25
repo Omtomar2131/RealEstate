@@ -1,0 +1,164 @@
+/* Wrapper for footer */
+.f-wrapper {
+    margin-top: 40px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Flexbox for layout */
+.f-content {
+    display: flex;
+    justify-content: space-between; /* Space between left and right side */
+    align-items: flex-start; /* Align items to the top */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left side (logo and paragraph) */
+.left {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+ 
+.left p {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgb(140, 139, 139);
+}
+
+.footer-logo {
+    width: 130px;
+}
+
+.footer-logo img {
+    width: 70%;
+}
+
+/* Right side (information and links) */
+.right {
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Footer information section */
+.footer-info h3 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #1f3e72;
+}
+
+.footer-info p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: rgb(140, 139, 139);
+}
+
+/* Footer links list */
+.footer-links {
+    display: flex;
+    flex-direction: row; /* List items in a row */
+    gap: 37px; /* Space between list items */
+    list-style: none;
+    font-weight: 500;
+    padding: 0;
+    color: #1f3e72;
+    margin: 0;
+}
+
+/* List items style */
+.footer-links li {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #1f3e72;
+}
+
+.footer-links a:hover {
+    color: #007bff; /* Add hover effect */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    /* Make the footer content stack vertically on smaller screens */
+    .f-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Left section adjustments */
+    .left {
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .footer-logo {
+        width: 100px;
+    }
+
+    .left p {
+        font-size: 14px;
+    }
+
+    /* Right section adjustments */
+    .right {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .footer-info h3 {
+        font-size: 24px;
+    }
+
+    .footer-info p {
+        font-size: 14px;
+    }
+
+    /* Footer links in column for better spacing on mobile */
+    .footer-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+
+    }
+
+    .footer-links li {
+        font-size: 20px;
+    }
+}
+
+/* Extra small devices (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .footer-logo {
+        width: 90px;
+    }
+
+    .left p {
+        font-size: 13px;
+    }
+
+    .footer-info h3 {
+        font-size: 20px;
+    }
+
+    .footer-info p {
+        font-size: 13px;
+    }
+
+    .footer-links li {
+        font-size: 11px;
+    }
+}

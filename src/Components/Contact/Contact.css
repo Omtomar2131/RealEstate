@@ -1,0 +1,211 @@
+/* Wrapper Section */
+.c-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container for Inner Content */
+.c-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  flex-wrap: wrap; /* Allow content to wrap on small screens */
+}
+
+/* Left Section Styling */
+.c-left {
+  height: 100%;
+  max-width: 600px; /* Set max-width for proper alignment */
+  padding: 20px;
+  width: 100%; /* Make it full width on smaller screens */
+}
+
+/* Main Heading */
+.primarytext {
+  display: block;
+  font-size: 35px; /* Large font for main heading */
+  margin: 10px 0;
+  font-weight: 700;
+  color: #ff9933; /* Orange color for main heading */
+}
+
+.bluetext {
+  color: #1f3e72;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+/* Secondary Text */
+.secondaryText {
+  display: block;
+  font-size: 18px;
+  color: #5d5d5d; /* Muted gray for secondary text */
+  line-height: 1.6; /* Comfortable line spacing */
+  margin-top: 10px;
+}
+
+/* Contact Options Section */
+.contact-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for the options */
+  gap: 20px; /* Space between the contact options */
+  margin-top: 30px;
+}
+
+/* Styling for Each Contact Option */
+.contact-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #ffffff; /* White background for the boxes */
+  border: 1px solid rgba(32, 32, 32, 0.05); /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease;
+}
+
+.contact-option:hover {
+  transform: scale(1.1); /* Slight hover effect for interaction */
+}
+
+/* Layout for Contact Icon and Text */
+.contact1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px; /* Space between icon and text */
+}
+
+.icon {
+  font-size: 2rem; /* Larger icons */
+  color: #1f3e72;
+  background-color: #e4d7ff;
+  border-radius: 10px;
+}
+
+.head2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+}
+
+.head {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1f3e72; /* Dark blue for headings */
+}
+
+.contact-number {
+  font-size: 16px;
+  color: #333; /* Darker color for the number */
+  margin-top: 5px;
+}
+
+/* Button Styling */
+.contact-button {
+  margin-top: 15px;
+  padding: 10px 70px;
+  background-color: hsl(263, 82%, 87%); /* Purple-blue color */
+  border: none;
+  display: block;
+  color: #5512e5;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #e4d7ff;
+  transform: scale(0.9);
+  transition: 0.3ms ease;
+}
+
+/* Right Section Styling */
+.c-right {
+  max-width: 500px; /* Restrict the max width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%; /* Full width on mobile */
+}
+
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+   .c-wrapper{
+    padding-left: 0px;
+    padding-right: 0px;
+   }
+  .c-container {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+  }
+
+  /* Primary and Blue Text */
+  .primarytext {
+    font-size: 30px; /* Slightly smaller for mobile */
+  }
+
+  .bluetext {
+    font-size: 35px;
+  }
+
+  /* Contact Options: Single Column */
+  .contact-options {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 15px; /* Smaller gap */
+  }
+
+  /* Button Adjustments */
+  .contact-button {
+    padding: 10px 50px; /* Adjust padding */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  /* Image Adjustments */
+  .c-right {
+    max-width: 100%;
+  }
+
+  .image-container {
+    width: 100%;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  /* Even Smaller Adjustments for very small devices */
+  
+  .primarytext {
+    font-size: 25px; /* Smaller for very small screens */
+  }
+
+  .bluetext {
+    font-size: 30px;
+  }
+
+  .secondaryText {
+    font-size: 16px;
+  }
+
+  /* Contact Option Padding */
+  .contact-option {
+    padding: 15px; /* Smaller padding on very small devices */
+  }
+
+  /* Button Adjustments */
+  .contact-button {
+    padding: 8px 40px;
+  }
+}
